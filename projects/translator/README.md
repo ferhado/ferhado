@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
   setLanguage(lang) {
     let translation = require(`../assets/i18n/${lang}.json`);
     this.tr.setTranslationObject(translation);
+    this.tr.setLanguage(lang);
   }
 
 }

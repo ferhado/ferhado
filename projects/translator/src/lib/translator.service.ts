@@ -33,8 +33,8 @@ export class TranslatorService {
       this.locale = value;
       localStorage.setItem("locale", value);
       if (reload) location.reload(true);
-      return;
     }
+
     this.setSettings(value);
   }
 
