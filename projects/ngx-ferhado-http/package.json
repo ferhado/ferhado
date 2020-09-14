@@ -1,0 +1,26 @@
+{
+  "name": "@ferhado/http",
+  "version": "1.0.1",
+  "description": "Angular Http Client Package",
+  "author": "Ferhado",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferhado/ferhado/tree/master/projects/ferhado-http"
+  },
+  "bugs": "https://github.com/ferhado/ferhado/issues",
+  "keywords": [
+    "ngx-http",
+    "ngx-http-client",
+    "angular-http",
+    "httpclient",
+    "angular2-http"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
