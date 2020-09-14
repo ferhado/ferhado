@@ -28,11 +28,11 @@ export class TranslatorService {
     this.setSettings(this.locale);
   }
 
-  setLanguage(value) {
+  setLanguage(value, reload = false) {
     if (this.locale != value) {
       this.locale = value;
-      location.reload(true);
       localStorage.setItem("locale", value);
+      if (reload) location.reload(true);
       return;
     }
     this.setSettings(value);

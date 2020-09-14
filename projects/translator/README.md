@@ -39,14 +39,11 @@ import { TranslatorService } from '@ferhado/tTranslator';
 })
 
 export class AppComponent implements OnInit {
-
-  constructor(public tr: TranslatorService) {
-    let translation = require('path/to/translation/file.json');
-    this.tr.setTranslationObject(translation)
-  }
+  constructor(public tr: TranslatorService) { }
 
   ngOnInit() {
-    console.log(this.tr.get("key"));
+    let translation = require(`../assets/i18n/${this.tr.locale}.json`);
+    this.tr.setTranslationObject(translation);
   }
 
 }
@@ -64,4 +61,4 @@ export class AppComponent implements OnInit {
 <h1>{{tr.locale}}</h1>
 <h1>{{tr.dir}}</h1>
 
-```
+``` 
