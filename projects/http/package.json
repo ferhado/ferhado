@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ferhado/ferhado/tree/master/projects/ferhado-http"
+    "url": "https://github.com/ferhado/ferhado/tree/master/projects/http"
   },
   "bugs": "https://github.com/ferhado/ferhado/issues",
   "keywords": [
