@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "ferhado-http": [
-        "dist/ferhado-http/ferhado-http",
-        "dist/ferhado-http"
+      "http": [
+        "dist/http/http",
+        "dist/http"
       ]
     }
   }

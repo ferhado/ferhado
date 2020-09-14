@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ferhado-http": {
+    "http": {
       "projectType": "library",
-      "root": "projects/ferhado-http",
-      "sourceRoot": "projects/ferhado-http/src",
+      "root": "projects/http",
+      "sourceRoot": "projects/http/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ferhado-http/tsconfig.lib.json",
-            "project": "projects/ferhado-http/ng-package.json"
+            "tsConfig": "projects/http/tsconfig.lib.json",
+            "project": "projects/http/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ferhado-http/tsconfig.lib.prod.json"
+              "tsConfig": "projects/http/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ferhado-http/src/test.ts",
-            "tsConfig": "projects/ferhado-http/tsconfig.spec.json",
-            "karmaConfig": "projects/ferhado-http/karma.conf.js"
+            "main": "projects/http/src/test.ts",
+            "tsConfig": "projects/http/tsconfig.spec.json",
+            "karmaConfig": "projects/http/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ferhado-http/tsconfig.lib.json",
-              "projects/ferhado-http/tsconfig.spec.json"
+              "projects/http/tsconfig.lib.json",
+              "projects/http/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

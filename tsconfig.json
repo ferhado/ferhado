@@ -8,10 +8,10 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/ferhado-http/tsconfig.lib.json"
+      "path": "./projects/http/tsconfig.lib.json"
     },
     {
-      "path": "./projects/ferhado-http/tsconfig.spec.json"
+      "path": "./projects/http/tsconfig.spec.json"
     },
     {
       "path": "./projects/test-app/tsconfig.app.json"
