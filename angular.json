@@ -145,6 +145,46 @@
           }
         }
       }
+    },
+    "translator": {
+      "projectType": "library",
+      "root": "projects/translator",
+      "sourceRoot": "projects/translator/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/translator/tsconfig.lib.json",
+            "project": "projects/translator/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/translator/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/translator/src/test.ts",
+            "tsConfig": "projects/translator/tsconfig.spec.json",
+            "karmaConfig": "projects/translator/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/translator/tsconfig.lib.json",
+              "projects/translator/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "test-app"

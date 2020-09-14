@@ -8,12 +8,12 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
   ]
 })
 
-export class FerhadoHttpModule {
+export class HttpModule {
   public static forRoot(HttpConfig?: {
     requestUrlPrefix?: string
   }): ModuleWithProviders {
     return {
-      ngModule: FerhadoHttpModule,
+      ngModule: HttpModule,
       providers: [
         { provide: 'HttpConfig', useValue: HttpConfig }
       ]

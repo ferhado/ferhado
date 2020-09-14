@@ -1,24 +1,25 @@
+<br>
+
 # Angular HttpClient
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.14.
 
 ## Installation
 ```
-npm install @ferhado/http
+npm install @ferhado/http --save
 ```
 
 ## Usage Example
 
 ### app.module.ts
 ```ts
-import { FerhadoHttpModule } from '@ferhado/http';
+import { HttpModule } from '@ferhado/http';
 
 @NgModule({
   // ...
   
   imports: [
     // ...
-    FerhadoHttpModule.forRoot({
+    HttpModule.forRoot({
       // Optional, all requests will begin with this prefix
       requestUrlPrefix: 'https://jsonplaceholder.typicode.com/'
     })
@@ -33,7 +34,7 @@ export class AppModule { }
 
 ```ts
 import { Component, OnInit } from '@angular/core';
-import { FerhadoHttp } from '@ferhado/http';
+import { HttpService } from '@ferhado/http';
 
 @Component({
   selector: 'app-root',
@@ -42,7 +43,7 @@ import { FerhadoHttp } from '@ferhado/http';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private http: FerhadoHttp) { }
+  constructor(private http: HttpService) { }
 
   // Possible usage
   // this.http.post(url)

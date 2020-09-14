@@ -18,7 +18,7 @@ interface RequestOptions {
   providedIn: 'root'
 })
 
-export class FerhadoHttp {
+export class HttpService {
 
   constructor(@Inject('HttpConfig') private config, private http: HttpClient) { }
 

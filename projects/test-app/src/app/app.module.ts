@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FerhadoHttpModule } from '@ferhado/http';
+import { HttpModule } from '@ferhado/http';
+import { TranslatorModule } from '@ferhado/translator';
 
 @NgModule({
   declarations: [
@@ -10,8 +11,12 @@ import { FerhadoHttpModule } from '@ferhado/http';
   ],
   imports: [
     BrowserModule,
-    FerhadoHttpModule.forRoot({
+    HttpModule.forRoot({
       requestUrlPrefix: 'https://jsonplaceholder.typicode.com/'
+    }),
+    TranslatorModule.forRoot({
+      defaultLocale: "en",
+      allowedLocales: ["en", "de"]
     })
   ],
   providers: [],

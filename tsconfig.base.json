@@ -19,6 +19,10 @@
       "http": [
         "dist/http/http",
         "dist/http"
+      ],
+      "translator": [
+        "dist/translator/translator",
+        "dist/translator"
       ]
     }
   }

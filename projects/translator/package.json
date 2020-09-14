@@ -1,20 +1,20 @@
 {
-  "name": "@ferhado/http",
-  "version": "1.0.7",
-  "description": "Angular Http Client Package",
+  "name": "@ferhado/translator",
+  "version": "1.0.1",
+  "description": "Angular Translator",
   "author": "Ferhado",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ferhado/ferhado/tree/master/projects/http"
+    "url": "https://github.com/ferhado/ferhado/tree/master/projects/translator"
   },
   "bugs": "https://github.com/ferhado/ferhado/issues",
   "keywords": [
-    "ngx-http",
-    "ngx-http-client",
-    "angular-http",
-    "httpclient",
-    "angular2-http"
+    "ngx-translator",
+    "translate",
+    "i18n",
+    "angular-translator",
+    "angular2-translator"
   ],
   "publishConfig": {
     "access": "public"
