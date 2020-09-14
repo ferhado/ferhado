@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxFerhadoHttp } from '@ferhado/http';
+import { FerhadoHttp } from '@ferhado/http';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { NgxFerhadoHttp } from '@ferhado/http';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private http: NgxFerhadoHttp) { }
+  constructor(private http: FerhadoHttp) { }
 
   ngOnInit() {
     this.http.post("/posts", { test: "Test" }, {

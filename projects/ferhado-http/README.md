@@ -1,4 +1,4 @@
-# NgxFerhadoHttp
+# FerhadoHttp
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.14.
 
@@ -11,14 +11,14 @@ npm install @ferhado/http
 
 ### app.module.ts
 ```ts
-import { NgxFerhadoHttpModule } from '@ferhado/http';
+import { FerhadoHttpModule } from '@ferhado/http';
 
 @NgModule({
   // ...
   
   imports: [
     // ...
-    NgxFerhadoHttpModule.forRoot({
+    FerhadoHttpModule.forRoot({
       // Optional, all requests will begin with this prefix
       requestUrlPrefix: 'https://jsonplaceholder.typicode.com/'
     })
@@ -33,7 +33,7 @@ export class AppModule { }
 
 ```ts
 import { Component, OnInit } from '@angular/core';
-import { NgxFerhadoHttp } from '@ferhado/http';
+import { FerhadoHttp } from '@ferhado/http';
 
 @Component({
   selector: 'app-root',
@@ -42,7 +42,7 @@ import { NgxFerhadoHttp } from '@ferhado/http';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private http: NgxFerhadoHttp) { }
+  constructor(private http: FerhadoHttp) { }
 
   // Possible usage
   // this.http.post(url)

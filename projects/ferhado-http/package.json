@@ -1,6 +1,6 @@
 {
   "name": "@ferhado/http",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Angular Http Client Package",
   "author": "Ferhado",
   "license": "MIT",
