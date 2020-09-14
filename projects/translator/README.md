@@ -33,6 +33,8 @@ export class AppModule { }
 import { Component, OnInit } from '@angular/core';
 import { TranslatorService } from '@ferhado/tTranslator';
 
+declare const require;
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -42,7 +44,11 @@ export class AppComponent implements OnInit {
   constructor(public tr: TranslatorService) { }
 
   ngOnInit() {
-    let translation = require(`../assets/i18n/${this.tr.locale}.json`);
+    this.setLanguage(this.tr.locale);
+  }
+
+  setLanguage(lang) {
+    let translation = require(`../assets/i18n/${lang}.json`);
     this.tr.setTranslationObject(translation);
   }
 
@@ -54,8 +60,8 @@ export class AppComponent implements OnInit {
 
 ```html
 
-<button (click)="tr.setLanguage('en')">English</button>
-<button (click)="tr.setLanguage('de')">Deutsch</button>
+<button (click)="setLanguage('en')">English</button>
+<button (click)="setLanguage('de')">Deutsch</button>
 
 <h1>{{'key' | tr}}</h1>
 <h1>{{tr.locale}}</h1>

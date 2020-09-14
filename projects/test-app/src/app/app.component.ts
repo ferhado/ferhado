@@ -13,9 +13,13 @@ declare const require;
 export class AppComponent implements OnInit {
   constructor(private http: HttpService, public tr: TranslatorService) { }
 
-  ngOnInit() {
-    let translation = require(`../assets/i18n/${this.tr.locale}.json`);
+  setLanguage(lang) {
+    let translation = require(`../assets/i18n/${lang}.json`);
     this.tr.setTranslationObject(translation);
+  }
+
+  ngOnInit() {
+    this.setLanguage(this.tr.locale);
 
     this.http.post("/posts", { test: "Test" }, {
       headers: {},
