@@ -41,6 +41,7 @@ declare const require;
 })
 
 export class AppComponent implements OnInit {
+  
   constructor(public tr: TranslatorService) { }
 
   ngOnInit() {
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
   setLanguage(lang) {
     let translation = require(`../assets/i18n/${lang}.json`);
     this.tr.setTranslationObject(translation);
-    this.tr.setLanguage(lang);
+    this.tr.setLanguage(lang, false); // Set to true if you want to reload page after language changes
   }
 
 }
