@@ -1,3 +1,5 @@
+<br>
+
 # Angular Translator
 
 ## Installation
