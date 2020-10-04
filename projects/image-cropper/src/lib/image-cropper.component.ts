@@ -23,9 +23,9 @@ export class ImageCropperComponent implements OnChanges {
 
   resizer: any = {};
 
-  @Input('quality') quality: number = 77;
-  @Input('ratio') ratio: string = "250x250";
-  @Input('dataURI') dataURI: string;
+  @Input() quality: number = 77;
+  @Input() ratio: string = "250x250";
+  @Input() dataURI: string;
   @Input() format: 'png' | 'jpeg' | 'bmp' | 'webp' | 'ico' = 'png';
 
 
