@@ -97,7 +97,7 @@ export class ImageCropperComponent implements OnChanges {
     this.context.drawImage(image, startX, startY, scaleW, scaleH, 0, 0, this.canvas.width, this.canvas.height);
     let result = this.canvas.toDataURL(this.getFormat(), this.getQuality());
 
-    this.result = { blob: b64toBlob(result, ''), base64: result }
+    this.result = { blob: b64toBlob(result, this.getFormat()), base64: result }
 
     this.onCrop.emit(this.result);
 

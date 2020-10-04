@@ -38,4 +38,9 @@ export class AppComponent implements OnInit {
     })
   }
 
+  onCrop(result) {
+    console.log(result.base64);
+    console.log(result.blob);
+  }
+
 }
