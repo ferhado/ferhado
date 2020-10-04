@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '@ferhado/http';
 import { TranslatorService } from '@ferhado/translator';
-import { image2base64 } from '../app/cropper/utils';
+import { image2base64 } from '@ferhado/image-cropper';
 
 declare const require;
 

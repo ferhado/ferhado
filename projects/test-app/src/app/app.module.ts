@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@ferhado/http';
 import { TranslatorModule } from '@ferhado/translator';
-import { ImageCropperModule } from 'projects/image-cropper/src/public-api';
+import { ImageCropperModule } from '@ferhado/image-cropper';
+
 
 @NgModule({
   declarations: [

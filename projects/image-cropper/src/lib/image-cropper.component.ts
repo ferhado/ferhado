@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { b64toBlob } from './utils';
 
 @Component({
@@ -27,6 +27,10 @@ export class ImageCropperComponent implements OnChanges {
   @Input('ratio') ratio: string = "250x250";
   @Input('dataURI') dataURI: string;
   @Input() format: 'png' | 'jpeg' | 'bmp' | 'webp' | 'ico' = 'png';
+
+
+  @Output() onCrop: EventEmitter<any> = new EventEmitter();
+
 
   @ViewChild('parentSource', { static: true }) parentSource: ElementRef;
   @ViewChild('imageSource', { static: true }) imageSource: ElementRef;
@@ -94,6 +98,8 @@ export class ImageCropperComponent implements OnChanges {
     let result = this.canvas.toDataURL(this.getFormat(), this.getQuality());
 
     this.result = { blob: b64toBlob(result, ''), base64: result }
+
+    this.onCrop.emit(this.result);
 
   }
 
