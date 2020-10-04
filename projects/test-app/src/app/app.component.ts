@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '@ferhado/http';
 import { TranslatorService } from '@ferhado/translator';
+import { image2base64 } from '../app/cropper/utils';
 
 declare const require;
 
@@ -12,6 +13,7 @@ declare const require;
 
 export class AppComponent implements OnInit {
   constructor(private http: HttpService, public tr: TranslatorService) { }
+  dataUri;
 
   setLanguage(lang) {
     let translation = require(`../assets/i18n/${lang}.json`);
@@ -28,6 +30,12 @@ export class AppComponent implements OnInit {
       console.table(response);
     });
 
+  }
+
+  selectFile(file) {
+    image2base64(file, (base64) => {
+      this.dataUri = base64;
+    })
   }
 
 }

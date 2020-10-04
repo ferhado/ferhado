@@ -27,6 +27,12 @@
     },
     {
       "path": "./projects/translator/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/image-cropper/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/image-cropper/tsconfig.spec.json"
     }
   ]
 }

@@ -1,4 +1,9 @@
-<h1>
+<input type="file" (change)="selectFile($event.target.files[0])">
+<image-cropper ratio="2560x1400" [dataURI]="dataUri" #crop></image-cropper>
+
+<img [src]="crop.result?.base64" height="300" style="margin-top: 20px;">
+
+<!-- <h1>
   Welcome to my Test App!
 </h1>
 
@@ -7,4 +12,4 @@
 
 <h1>Language: {{'native' | tr}}</h1>
 <h1>Language code: {{tr.locale}}</h1>
-<h1>Language direction: {{tr.dir}}</h1>
+<h1>Language direction: {{tr.dir}}</h1> -->

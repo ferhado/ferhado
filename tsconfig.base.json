@@ -23,6 +23,10 @@
       "translator": [
         "dist/translator/translator",
         "dist/translator"
+      ],
+      "image-cropper": [
+        "dist/image-cropper/image-cropper",
+        "dist/image-cropper"
       ]
     }
   }

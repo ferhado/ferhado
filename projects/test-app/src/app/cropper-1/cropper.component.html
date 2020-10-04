@@ -1,0 +1,29 @@
+<div style="max-height: 400px; overflow: auto;">
+     <div class="preview-container"
+          (mousedown)="startMoving($event)"
+          (touchstart)="startMoving($event.changedTouches[0])"
+          (mouseleave)="stopMoving();"
+          (mouseup)="stopMoving();"
+          (touchend)="stopMoving();"
+          (touchmove)="moving($event.changedTouches[0])"
+          (mousemove)="moving($event)"
+          #containerSource>
+
+          <div class="img-zoom-lens"
+               [style.width.px]="lensWidth"
+               [style.height.px]="lensHeight"
+               [style.left]="'calc(50% - '+(lensWidth/2)+'px)'"
+               [style.top]="'calc(50% - '+(lensHeight/2)+'px)'"
+               #lensSource>
+
+               <!--   <div class="top-left"></div>
+          <div class="top-right"></div>
+          <div class="bottom-left"></div>
+          <div class="bottom-right"></div> -->
+          </div>
+
+          <img #imageSource [src]=" target" (touchend)="stopMoving()" (mouseup)="stopMoving()" draggable="false">
+     </div>
+</div>
+
+<img [src]="croped" style="margin: 50px; max-width: 200px;">

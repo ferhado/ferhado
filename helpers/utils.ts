@@ -205,3 +205,95 @@ export function image2base64(file) {
     };
   })
 }
+
+/*
+export function resizable(root, callback) {
+  let self: any = {};
+
+  self.resize = { prevX: 0, prevY: 0 };
+  self.element = root;
+
+  self.mouseUpHandler = () => self.element.isResizing = false;
+  document.body.addEventListener("mouseup", self.mouseUpHandler);
+
+  self.topLeft = root.getElementsByClassName("top-left")[0];
+  self.topRight = root.getElementsByClassName("top-right")[0];
+  self.bottomRight = root.getElementsByClassName("bottom-left")[0];
+  self.bottomLeft = root.getElementsByClassName("bottom-right")[0];
+
+  function triggerResizer(e) {
+    self.element.isResizing = e.currentTarget.resizer;
+    self.resize.prevX = e.clientX;
+    self.resize.prevY = e.clientY;
+  }
+
+  self.topLeft.resizer = 1;
+  self.topLeft.addEventListener("mousedown", triggerResizer);
+
+  self.topRight.addEventListener("mousedown", triggerResizer);
+  self.topRight.resizer = 3;
+
+  self.bottomRight.addEventListener("mousedown", triggerResizer);
+  self.bottomRight.resizer = 5;
+
+  self.bottomLeft.addEventListener("mousedown", triggerResizer);
+  self.bottomLeft.resizer = 7;
+
+
+  function resize(e) {
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    if (!self.element.isResizing) return;
+
+    let top, left, width, height;
+    console.log(self.element);
+
+    callback({
+      top: self.element.offsetTop,
+      left: self.element.offsetLeft,
+      width: self.element.clientWidth,
+      height: self.element.clientHeight
+    });
+    return;
+
+    switch (self.element.isResizing) {
+      case 1:
+        top = (self.element.offsetTop + (e.clientY - self.resize.prevY));
+        left = (self.element.offsetLeft + (e.clientX - self.resize.prevX));
+        width = (self.element.clientWidth - (e.clientX - self.resize.prevX));
+        height = (self.element.clientHeight - (e.clientY - self.resize.prevY));
+        callback({ top, left, width, height });
+        break;
+
+      case 3:
+        top = (self.element.offsetTop + (e.clientY - self.resize.prevY));
+        left = self.element.offsetLeft;
+        width = (self.element.clientWidth + (e.clientX - self.resize.prevX));
+        height = (self.element.clientHeight - (e.clientY - self.resize.prevY));
+        callback({ top, left, width, height });
+        break;
+
+      case 5:
+        top = self.element.offsetTop;
+        left = (self.element.offsetLeft + (e.clientX - self.resize.prevX));
+        width = (self.element.clientWidth - (e.clientX - self.resize.prevX));
+        height = (self.element.clientHeight + (e.clientY - self.resize.prevY));
+        callback({ top, left, width, height });
+        break;
+
+      case 7:
+        top = self.element.offsetTop;
+        left = self.element.offsetLeft;
+        width = (self.element.clientWidth + (e.clientX - self.resize.prevX));
+        height = (self.element.clientHeight + (e.clientY - self.resize.prevY));
+        callback({ top, left, width, height });
+        break;
+
+    }
+
+    self.resize.prevX = e.clientX;
+    self.resize.prevY = e.clientY;
+  }
+
+  document.body.addEventListener("mousemove", resize);
+} */

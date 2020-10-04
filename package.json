@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build:http": "ng build http --prod && cd dist/http && npm pack",
     "build:tr": "ng build translator --prod && cd dist/translator && npm pack",
+    "build:cropper": "ng build image-cropper --prod && cd dist/image-cropper && npm pack",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

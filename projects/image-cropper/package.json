@@ -1,0 +1,29 @@
+{
+  "name": "@ferhado/image-cropper",
+  "version": "1.0.0",
+  "description": "Angular Image Cropper Package",
+  "author": "Ferhado",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferhado/ferhado/tree/master/projects/image-cropper"
+  },
+  "bugs": "https://github.com/ferhado/ferhado/issues",
+  "keywords": [
+    "ngx-image-cropper",
+    "ngx-cropper",
+    "angular-image-cropper",
+    "image-cropper",
+    "angular2-image-cropper"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

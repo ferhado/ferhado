@@ -1,0 +1,21 @@
+<div class="cropper-container">
+  <div class="cropper-wrapper"
+       (mouseleave)="stopMoving()"
+       (mouseup)="stopMoving()"
+       (touchend)="stopMoving()"
+       (mousemove)="resize($event); moving($event)"
+       (touchmove)="resize($event); moving($event)"
+       #parentSource>
+
+    <div class="cropper-resizable"
+         (mousedown)="startMoving($event)"
+         (touchstart)="startMoving($event)"
+         #childSource>
+      <div class="cropper-resizer"
+           (mousedown)="startResize($event)"
+           (touchstart)="startResize($event)"></div>
+    </div>
+
+    <img [src]="dataURI" draggable="false">
+  </div>
+</div>
