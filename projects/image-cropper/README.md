@@ -59,7 +59,9 @@ export class AppComponent implements OnInit {
 ### app.component.html
 ```html
 <input type="file" (change)="selectFile($event.target.files[0])">
-<image-cropper ratio="900x300" [dataURI]="dataUri" (onCrop)="onCrop($event)" #crop></image-cropper>
+
+<!-- format: 'png' | 'jpeg' | 'bmp' | 'webp' | 'ico', default is png -->
+<image-cropper ratio="450x350" [dataURI]="dataUri" format="jpeg" (onCrop)="onCrop($event)" #crop></image-cropper>
 
 <img [src]="crop.result?.base64" height="300" style="margin-top: 20px;">
 
