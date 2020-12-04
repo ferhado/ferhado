@@ -10,6 +10,8 @@ npm install @ferhado/image-cropper --save
 
 ## Usage Example
 
+<a href="https://stackblitz.com/edit/angular-ferhado-image-cropper?file=src%2Fapp%2Fapp.component.ts" target="_blank">demo</a>
+
 ### app.module.ts
 ```ts
 import { ImageCropperModule } from '@ferhado/image-cropper';
